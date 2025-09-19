@@ -104,19 +104,41 @@
       id="home"
       class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100"
     >
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <p class="text-sm text-gray-600 mb-4">Full-Stack Developer</p>
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          안녕하세요,<br />
-          <span class="text-primary">정승원</span>입니다
-        </h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          MSA 기반 실무 프로젝트를 경험한 주니어 개발자로,<br />
-          기획부터 개발, 배포까지의 전체 과정을 경험했습니다.
-        </p>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- 자기소개 텍스트 -->
+          <div class="flex-1 text-center lg:text-left">
+            <p class="text-sm text-gray-600 mb-4">Full-Stack Developer</p>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+              안녕하세요,<br />
+              <span class="text-primary">정승원</span>입니다
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl lg:max-w-none mb-8">
+              MSA 기반 실무 프로젝트를 경험한 주니어 개발자로,<br />
+              기획부터 개발, 배포까지의 전체 과정을 경험했습니다.
+            </p>
+          </div>
+
+          <!-- 프로필 사진 -->
+          <div class="flex-shrink-0">
+            <div class="relative">
+              <div class="relative overflow-hidden">
+                <img
+                  src="/assets/profile-photo.jpg"
+                  alt="정승원 프로필 사진"
+                  class="w-64 h-80 md:w-72 md:h-96 object-contain transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+                  onclick="openImageModal('/assets/profile-photo.jpg')"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- 기술스택 -->
-        <div class="mb-8 max-w-5xl mx-auto">
+        <div class="mt-12 mb-8 max-w-5xl mx-auto">
           <div
             class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm"
           >
@@ -356,18 +378,18 @@
 
         <div class="space-y-8">
           <!-- Petful -->
-          <article
-            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow"
-          >
-            <div class="flex flex-col lg:flex-row gap-6">
-              <!-- 프로젝트 정보 -->
-              <div class="flex-1">
+          <article class="pb-12">
+            <!-- 1행: 프로젝트 개요 및 소개 -->
+            <div class="mb-8">
                 <div class="flex items-start justify-between mb-4">
                   <div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Petful</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                      Petful
+                    </h3>
                     <p class="text-gray-600 text-sm">
                       펫 인플루언서 & 마케팅 플랫폼
                     </p>
+                    <p class="text-gray-500 text-xs mt-1">개발 기간: 8주</p>
                   </div>
                   <span
                     class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium"
@@ -415,126 +437,231 @@
 
                 <div class="mb-6">
                   <h4 class="font-semibold text-gray-800 mb-3">주요 기능</h4>
-                  <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-start gap-2">
-                      <span
-                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
-                      ></span>
-                      <span
-                        >JWT → X-User-No 헤더 변환으로 성능 최적화된 인증
-                        시스템</span
-                      >
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span
-                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
-                      ></span>
-                      <span
-                        >이메일 인증, 비밀번호 재설정, 프로필 이미지
-                        업로드</span
-                      >
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span
-                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
-                      ></span>
-                      <span>펫 포트폴리오, 히스토리 관리, 인스타그램 연동</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span
-                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
-                      ></span>
-                      <span
-                        >관리자 시스템: 사용자 관리, 신고 처리, 펫스타
-                        승인</span
-                      >
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span
-                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
-                      ></span>
-                      <span
-                        >User/Pet 서비스 분리, OpenFeign을 통한 서비스 간
-                        통신</span
-                      >
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span
-                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
-                      ></span>
-                      <span>ArgoCD + Jenkins로 자동 배포 파이프라인 구축</span>
-                    </li>
-                  </ul>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <ul class="text-sm text-gray-600 space-y-2">
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                        ></span>
+                        <span
+                          >JWT → X-User-No 헤더 변환으로 성능 최적화된 인증
+                          시스템</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                        ></span>
+                        <span
+                          >이메일 인증, 비밀번호 재설정, 프로필 이미지
+                          업로드</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                        ></span>
+                        <span
+                          >펫 포트폴리오, 히스토리 관리, 인스타그램 연동</span
+                        >
+                      </li>
+                    </ul>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                        ></span>
+                        <span
+                          >관리자 시스템: 사용자 관리, 신고 처리, 펫스타
+                          승인</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                        ></span>
+                        <span
+                          >User/Pet 서비스 분리, OpenFeign을 통한 서비스 간
+                          통신</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                        ></span>
+                        <span
+                          >ArgoCD + Jenkins로 자동 배포 파이프라인 구축</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="flex gap-3">
-                  <a
-                    href="https://github.com/backend20250319/BE09-Final-3team-BE"
-                    target="_blank"
-                    class="flex-1 text-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors"
-                    >Backend</a
-                  >
-                  <a
-                    href="https://github.com/backend20250319/BE09-Final-3team-FE"
-                    target="_blank"
-                    class="flex-1 text-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors"
-                    >Frontend</a
-                  >
-                  <a
-                    href="https://petful.site"
-                    target="_blank"
-                    class="flex-1 text-center px-4 py-2 bg-primary text-white hover:bg-blue-600 rounded-lg text-sm font-medium transition-colors"
-                    >Demo</a
-                  >
-                </div>
-              </div>
+            </div>
 
-              <!-- 스크린샷 -->
-              <div class="lg:w-80 flex-shrink-0 flex flex-col justify-center">
-                <h4 class="font-semibold text-gray-800 mb-3">스크린샷</h4>
-                <div class="grid grid-cols-2 gap-3">
-                  <img
-                    src="/assets/petful/petful-screenshot-1.png"
-                    alt="Petful 메인 페이지"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/petful-screenshot-1.png')"
-                  />
-                  <img
-                    src="/assets/petful/petful-screenshot-2.png"
-                    alt="Petful 펫 프로필"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/petful-screenshot-2.png')"
-                  />
-                  <img
-                    src="/assets/petful/petful-screenshot-3.png"
-                    alt="Petful 포트폴리오"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/petful-screenshot-3.png')"
-                  />
-                  <img
-                    src="/assets/petful/petful-screenshot-4.png"
-                    alt="Petful 관리자 페이지"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/petful-screenshot-4.png')"
-                  />
+            <!-- 2행: 시스템 아키텍처 & 데이터베이스 ERD -->
+            <div class="mb-8">
+                <h4 class="font-semibold text-gray-800 mb-3">
+                  시스템 아키텍처 & 데이터베이스 ERD
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- 시스템 아키텍처 -->
+                  <div>
+                    <h5 class="font-medium text-gray-700 mb-2 text-sm">
+                      시스템 아키텍처
+                    </h5>
+                    <div class="relative group">
+                      <img
+                        src="/assets/petful/system.png"
+                        alt="Petful 시스템 아키텍처"
+                        class="w-full h-56 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
+                        onclick="openImageModal('/assets/petful/system.png')"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                      />
+                      <div
+                        class="w-full h-56 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center hidden"
+                        style="display: none"
+                      >
+                        <div class="text-center">
+                          <div class="text-gray-400 text-2xl mb-1">🏗️</div>
+                          <div class="text-xs text-gray-500">
+                            시스템 아키텍처
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center"
+                      >
+                        <div
+                          class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <div class="bg-white/90 px-3 py-1 rounded-full">
+                            <span class="text-xs font-medium text-gray-800"
+                              >시스템 아키텍처</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 데이터베이스 ERD -->
+                  <div>
+                    <h5 class="font-medium text-gray-700 mb-2 text-sm">
+                      데이터베이스 ERD
+                    </h5>
+                    <div class="relative group">
+                      <img
+                        src="/assets/petful/erd.png"
+                        alt="Petful 데이터베이스 ERD"
+                        class="w-full h-56 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
+                        onclick="openImageModal('/assets/petful/erd.png')"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                      />
+                      <div
+                        class="w-full h-56 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center hidden"
+                        style="display: none"
+                      >
+                        <div class="text-center">
+                          <div class="text-gray-400 text-2xl mb-1">📊</div>
+                          <div class="text-xs text-gray-500">
+                            데이터베이스 ERD
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center"
+                      >
+                        <div
+                          class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <div class="bg-white/90 px-3 py-1 rounded-full">
+                            <span class="text-xs font-medium text-gray-800"
+                              >데이터베이스 설계</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- 3행: 스크린샷 -->
+            <div class="mb-8">
+              <h4 class="font-semibold text-gray-800 mb-4">스크린샷</h4>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center">
+                  <img
+                    src="/assets/petful/petful-screenshot-1.png"
+                    alt="Petful 메인 페이지"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/petful/petful-screenshot-1.png')"
+                  />
+                  <p class="text-xs text-gray-600">메인 페이지</p>
+                </div>
+                <div class="text-center">
+                  <img
+                    src="/assets/petful/petful-screenshot-2.png"
+                    alt="Petful 펫 프로필"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/petful/petful-screenshot-2.png')"
+                  />
+                  <p class="text-xs text-gray-600">펫 프로필</p>
+                </div>
+                <div class="text-center">
+                  <img
+                    src="/assets/petful/petful-screenshot-3.png"
+                    alt="Petful 포트폴리오"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/petful/petful-screenshot-3.png')"
+                  />
+                  <p class="text-xs text-gray-600">포트폴리오</p>
+                </div>
+                <div class="text-center">
+                  <img
+                    src="/assets/petful/petful-screenshot-4.png"
+                    alt="Petful 관리자 페이지"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/petful/petful-screenshot-4.png')"
+                  />
+                  <p class="text-xs text-gray-600">관리자 페이지</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 버튼 -->
+            <div class="flex gap-3 mt-6">
+              <a
+                href="https://github.com/pladata-encore/BE09-FINAL-3team"
+                target="_blank"
+                class="flex-1 text-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors"
+                >SourceCode</a
+              >
+              <a
+                href="https://petful.site"
+                target="_blank"
+                class="flex-1 text-center px-4 py-2 bg-primary text-white hover:bg-blue-600 rounded-lg text-sm font-medium transition-colors"
+                >Demo</a
+              >
+            </div>
+
+            <!-- 구분선 -->
+            <div class="mt-12 border-b border-gray-200"></div>
           </article>
 
           <!-- OliveYoung Clone -->
-          <article
-            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow"
-          >
-            <div class="flex flex-col lg:flex-row gap-6">
-              <!-- 프로젝트 정보 -->
-              <div class="flex-1">
+          <article class="pb-12">
+            <!-- 1행: 프로젝트 개요 및 소개 -->
+            <div class="mb-8">
                 <div class="flex items-start justify-between mb-4">
                   <div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">
                       OliveYoung Clone
                     </h3>
                     <p class="text-gray-600 text-sm">이커머스 플랫폼</p>
+                    <p class="text-gray-500 text-xs mt-1">개발 기간: 4주</p>
                   </div>
                   <span
                     class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium"
@@ -551,7 +678,7 @@
                     >
                     <span
                       class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs"
-                      >JPA</span
+                      >JPA Entity</span
                     >
                     <span
                       class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs"
@@ -563,76 +690,204 @@
                     >
                     <span
                       class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs"
-                      >JWT</span
+                      >TypeScript</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs"
+                      >Tailwind CSS</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs"
+                      >Axios</span
+                    >
+                    <span
+                      class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs"
+                      >JWT Authentication</span
                     >
                   </div>
                 </div>
 
+                <!-- 주요 기능 -->
                 <div class="mb-6">
                   <h4 class="font-semibold text-gray-800 mb-3">주요 기능</h4>
-                  <ul class="text-sm text-gray-600 space-y-2">
-                    <li class="flex items-start gap-2">
+                  <div class="space-y-2">
+                    <div class="flex items-start gap-2">
                       <span
                         class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
                       ></span>
-                      <span>리뷰 CRUD, JWT 인증, 관리자/회원 모듈 분리</span>
-                    </li>
-                    <li class="flex items-start gap-2">
+                      <span class="text-sm text-gray-600"
+                        >리뷰 CRUD, JWT 인증, 관리자/회원 모듈 분리</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-2">
                       <span
                         class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
                       ></span>
-                      <span>상품 상세/목록, 정렬/필터 구현</span>
-                    </li>
-                    <li class="flex items-start gap-2">
+                      <span class="text-sm text-gray-600"
+                        >상품 상세/목록, 정렬/필터 구현</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-2">
                       <span
                         class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
                       ></span>
-                      <span>장바구니, 쿠폰 시스템 구현</span>
-                    </li>
-                  </ul>
+                      <span class="text-sm text-gray-600"
+                        >장바구니, 쿠폰 시스템 구현</span
+                      >
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <span
+                        class="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"
+                      ></span>
+                      <span class="text-sm text-gray-600"
+                        >파일 서버 연동 및 이미지 처리</span
+                      >
+                    </div>
+                  </div>
                 </div>
+            </div>
 
-                <div class="flex gap-3">
-                  <a
-                    href="#"
-                    target="_blank"
-                    class="flex-1 text-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors"
-                    >Repository</a
-                  >
+            <!-- 2행: 시스템 구조 & 데이터베이스 ERD -->
+            <div class="mb-8">
+                <h4 class="font-semibold text-gray-800 mb-3">
+                  시스템 구조 & 데이터베이스 ERD
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- 시스템 구조 -->
+                  <div>
+                    <h5 class="font-medium text-gray-700 mb-2 text-sm">
+                      시스템 구조
+                    </h5>
+                    <div class="relative group">
+                      <img
+                        src="/assets/OliveYoung/system-architecture.png"
+                        alt="OliveYoung 시스템 구조도"
+                        class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
+                        onclick="openImageModal('/assets/OliveYoung/system-architecture.png')"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                      />
+                      <div
+                        class="w-full h-32 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center hidden"
+                        style="display: none"
+                      >
+                        <div class="text-center">
+                          <div class="text-gray-400 text-2xl mb-1">🏗️</div>
+                          <div class="text-xs text-gray-500">시스템 구조도</div>
+                        </div>
+                      </div>
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center"
+                      >
+                        <div
+                          class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <div class="bg-white/90 px-3 py-1 rounded-full">
+                            <span class="text-xs font-medium text-gray-800"
+                              >시스템 구조</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 데이터베이스 ERD -->
+                  <div>
+                    <h5 class="font-medium text-gray-700 mb-2 text-sm">
+                      데이터베이스 ERD
+                    </h5>
+                    <div class="relative group">
+                      <img
+                        src="/assets/OliveYoung/database-erd.png"
+                        alt="OliveYoung 데이터베이스 ERD"
+                        class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
+                        onclick="openImageModal('/assets/OliveYoung/database-erd.png')"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                      />
+                      <div
+                        class="w-full h-32 bg-gray-100 rounded-lg border border-gray-200 flex items-center justify-center hidden"
+                        style="display: none"
+                      >
+                        <div class="text-center">
+                          <div class="text-gray-400 text-2xl mb-1">📊</div>
+                          <div class="text-xs text-gray-500">
+                            데이터베이스 ERD
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg flex items-center justify-center"
+                      >
+                        <div
+                          class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          <div class="bg-white/90 px-3 py-1 rounded-full">
+                            <span class="text-xs font-medium text-gray-800"
+                              >데이터베이스 설계</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+            </div>
 
-              <!-- 스크린샷 -->
-              <div class="lg:w-80 flex-shrink-0 flex flex-col justify-center">
-                <h4 class="font-semibold text-gray-800 mb-3">스크린샷</h4>
-                <div class="grid grid-cols-2 gap-3">
+            <!-- 3행: 스크린샷 -->
+            <div class="mb-8">
+              <h4 class="font-semibold text-gray-800 mb-4">스크린샷</h4>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="text-center">
                   <img
                     src="/assets/OliveYoung/oliveyoung-screenshot-1.png"
                     alt="OliveYoung 메인 페이지"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/oliveyoung-screenshot-1.png')"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/OliveYoung/oliveyoung-screenshot-1.png')"
                   />
+                  <p class="text-xs text-gray-600">메인 페이지</p>
+                </div>
+                <div class="text-center">
                   <img
                     src="/assets/OliveYoung/oliveyoung-screenshot-2.png"
                     alt="OliveYoung 상품 목록"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/oliveyoung-screenshot-2.png')"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/OliveYoung/oliveyoung-screenshot-2.png')"
                   />
+                  <p class="text-xs text-gray-600">상품 목록</p>
+                </div>
+                <div class="text-center">
                   <img
                     src="/assets/OliveYoung/oliveyoung-screenshot-3.png"
                     alt="OliveYoung 상품 상세"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/oliveyoung-screenshot-3.png')"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/OliveYoung/oliveyoung-screenshot-3.png')"
                   />
+                  <p class="text-xs text-gray-600">상품 상세</p>
+                </div>
+                <div class="text-center">
                   <img
                     src="/assets/OliveYoung/oliveyoung-screenshot-4.png"
                     alt="OliveYoung 리뷰 시스템"
-                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer"
-                    onclick="openImageModal('/assets/oliveyoung-screenshot-4.png')"
+                    class="w-full h-32 object-cover rounded-lg border border-gray-200 hover:shadow-md transition-shadow cursor-pointer mb-2"
+                    onclick="openImageModal('/assets/OliveYoung/oliveyoung-screenshot-4.png')"
                   />
+                  <p class="text-xs text-gray-600">리뷰 시스템</p>
                 </div>
               </div>
             </div>
+
+            <!-- 버튼 -->
+            <div class="flex gap-3 mt-6">
+              <a
+                href="https://github.com/pladata-encore/BE09-4th-4team"
+                target="_blank"
+                class="w-full text-center px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                >Repository</a
+              >
+            </div>
+
+            <!-- 구분선 -->
+            <div class="mt-12 border-b border-gray-200"></div>
           </article>
         </div>
       </div>
@@ -643,7 +898,9 @@
       <div class="max-w-6xl mx-auto px-4">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">경험 & 교육</h2>
-          <p class="text-gray-600">학습과 실무와 유사한 경험을 통해 성장해왔습니다</p>
+          <p class="text-gray-600">
+            학습과 실무와 유사한 경험을 통해 성장해왔습니다
+          </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
